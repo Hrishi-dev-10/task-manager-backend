@@ -76,8 +76,6 @@ NODE_ENV=development        # "production" turns on Secure / SameSite=None cooki
 
 ### 3. Set up the database
 
-Make sure the `notifications` table is part of the schema first. It is defined in `src/models/notifications.model.ts` but is **not exported from `src/models/index.ts`**, and it is **not in the existing migration**. Add this line to `src/models/index.ts`:
-
 ```ts
 export { notifications } from './notifications.model.js';
 ```
